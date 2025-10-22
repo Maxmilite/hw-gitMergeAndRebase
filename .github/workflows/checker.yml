@@ -6,8 +6,8 @@ on:
 
 jobs:
   hw-checker:
-    runs-on: ubuntu-18.04
-    permissons: write-all
+    runs-on: ubuntu-22.04
+    permissions: write-all
     steps:
       - uses: actions/checkout@v4
 
@@ -37,4 +37,5 @@ jobs:
           USERNAME: ${{ github.event.issue.user.login }}
         with:
           script: |
+
             python main.py
